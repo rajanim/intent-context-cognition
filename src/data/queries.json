@@ -1,0 +1,212 @@
+{
+  "queries": [
+    {
+      "id": "intent_01",
+      "pillar": "intent",
+      "label": "Melancholy but hopeful",
+      "display_text": "something melancholy but hopeful, late afternoon light",
+      "bm25_keywords": "afternoon light",
+      "embedding": [],
+      "session_chain": null,
+      "trace_template": null
+    },
+    {
+      "id": "intent_02",
+      "pillar": "intent",
+      "label": "Courage, not strength",
+      "display_text": "courage that doesn't look like strength",
+      "bm25_keywords": "courage strength",
+      "embedding": [],
+      "session_chain": null,
+      "trace_template": null
+    },
+    {
+      "id": "intent_03",
+      "pillar": "intent",
+      "label": "Before something changes",
+      "display_text": "the moment before something changes",
+      "bm25_keywords": "moment change",
+      "embedding": [],
+      "session_chain": null,
+      "trace_template": null
+    },
+    {
+      "id": "intent_04",
+      "pillar": "intent",
+      "label": "Sunday morning textures",
+      "display_text": "textures that feel like Sunday morning",
+      "bm25_keywords": "texture morning light",
+      "embedding": [],
+      "session_chain": null,
+      "trace_template": null
+    },
+    {
+      "id": "intent_05",
+      "pillar": "intent",
+      "label": "Unspoken understanding",
+      "display_text": "two people who don't need to talk to understand each other",
+      "bm25_keywords": "two people together",
+      "embedding": [],
+      "session_chain": null,
+      "trace_template": null
+    },
+    {
+      "id": "context_01",
+      "pillar": "context",
+      "label": "Developer in flow",
+      "display_text": "developer in flow state",
+      "bm25_keywords": "developer working laptop",
+      "embedding": [],
+      "session_chain": {
+        "session_id": "session_a",
+        "prior_queries": ["clean workspace", "late night focus"],
+        "prior_embeddings": [],
+        "step": 3
+      },
+      "trace_template": null
+    },
+    {
+      "id": "context_02",
+      "pillar": "context",
+      "label": "Human scale",
+      "display_text": "human scale",
+      "bm25_keywords": "architecture scale",
+      "embedding": [],
+      "session_chain": {
+        "session_id": "session_b",
+        "prior_queries": ["urban architecture", "people in the city"],
+        "prior_embeddings": [],
+        "step": 3
+      },
+      "trace_template": null
+    },
+    {
+      "id": "context_03",
+      "pillar": "context",
+      "label": "Something aspirational",
+      "display_text": "something aspirational",
+      "bm25_keywords": "aspirational lifestyle",
+      "embedding": [],
+      "session_chain": {
+        "session_id": "session_c",
+        "prior_queries": ["natural materials", "slow living"],
+        "prior_embeddings": [],
+        "step": 3
+      },
+      "trace_template": null
+    },
+    {
+      "id": "context_04",
+      "pillar": "context",
+      "label": "The pivot — colder",
+      "display_text": "actually, I want something colder",
+      "bm25_keywords": "cold minimal",
+      "embedding": [],
+      "session_chain": {
+        "session_id": "session_d",
+        "prior_queries": ["warm beach tones"],
+        "prior_embeddings": [],
+        "step": 2,
+        "pivot": true,
+        "pivot_direction": -1
+      },
+      "trace_template": null
+    },
+    {
+      "id": "cognition_01",
+      "pillar": "cognition",
+      "label": "Tech startup, feels human",
+      "display_text": "something for a tech startup that feels human",
+      "bm25_keywords": "startup team office",
+      "embedding": [],
+      "session_chain": null,
+      "trace_template": {
+        "steps": [
+          "Analysing query for ambiguous modifier combinations...",
+          "Detected tension: [tech context] vs [human warmth] — conflicting visual registers.",
+          "Decomposing into sub-queries:",
+          "  Sub-query 1: candid team interactions, warm natural light",
+          "  Sub-query 2: product close-ups with visible human hands",
+          "  Sub-query 3: NOT polished corporate, NOT server racks, NOT staged poses",
+          "Routing sub-query 1 to k-NN retrieval...",
+          "Routing sub-query 2 to k-NN retrieval...",
+          "Applying negative signal filter for sub-query 3...",
+          "Merging ranked result lists with composite score...",
+          "Re-ranking by human presence score...",
+          "Returning top 6 results. Confidence: high."
+        ]
+      }
+    },
+    {
+      "id": "cognition_02",
+      "pillar": "cognition",
+      "label": "Mental health app hero",
+      "display_text": "hero image for a mental health app targeting young adults",
+      "bm25_keywords": "mental health wellness young",
+      "embedding": [],
+      "session_chain": null,
+      "trace_template": {
+        "steps": [
+          "Multi-constraint query detected. Parsing constraints...",
+          "Domain flag: mental health — activating safe imagery filter.",
+          "Audience signal: young adults (18-25) — adjusting visual style register.",
+          "Format constraint: hero image — filtering by landscape orientation.",
+          "Tone requirement: hopeful, non-clinical, non-stigmatising.",
+          "Routing to editorial-grounded RAG pipeline...",
+          "Applying domain-appropriate content filter...",
+          "Filtering by aspect ratio: landscape (width > height * 1.5)...",
+          "Scoring by emotional tone: positive, open, outdoor-weighted...",
+          "Returning top 6 results. All pass safe imagery threshold."
+        ]
+      }
+    },
+    {
+      "id": "cognition_03",
+      "pillar": "cognition",
+      "label": "Innovation, not a lightbulb",
+      "display_text": "innovation that doesn't look like a lightbulb",
+      "bm25_keywords": "innovation technology creative",
+      "embedding": [],
+      "session_chain": null,
+      "trace_template": {
+        "steps": [
+          "Negation + abstraction pattern detected.",
+          "Core concept: innovation",
+          "Building visual cliche exclusion list: lightbulb, gear, circuit board, rocket...",
+          "Expanding concept to unexpected representations of novelty:",
+          "  Process imagery: the moment of discovery",
+          "  Reaction imagery: human response to a new result",
+          "  First-use moments: hands on a new object",
+          "Running 3 parallel k-NN queries with concept expansions...",
+          "Filtering out cliche cluster matches (cosine sim > 0.85 to exclusion embeddings)...",
+          "Scoring remaining results by visual novelty...",
+          "Returning top 6 results. Innovation as human moment, not symbol."
+        ]
+      }
+    },
+    {
+      "id": "cognition_04",
+      "pillar": "cognition",
+      "label": "Cannot describe it",
+      "display_text": "something I cannot describe but will know when I see it",
+      "bm25_keywords": "",
+      "embedding": [],
+      "session_chain": null,
+      "trace_template": {
+        "steps": [
+          "Query received. Parsing for semantic signal...",
+          "Signal strength: minimal. No domain, tone, or subject anchor detected.",
+          "Checking session context for prior signal...",
+          "No active session found.",
+          "Cannot decompose without domain anchor.",
+          "Confidence: low. Insufficient signal for directed retrieval.",
+          "Falling back to session-neutral semantic centre of corpus...",
+          "Retrieving highest-variance, highest-engagement images across corpus...",
+          "This is not a failure — it is honest reasoning.",
+          "Returning 6 diverse, high-resonance images as a starting signal.",
+          "The system knows what it does not know. That is cognition."
+        ]
+      }
+    }
+  ]
+}
